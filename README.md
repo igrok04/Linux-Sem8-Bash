@@ -17,7 +17,7 @@ cat > cleandir
 
 read -p "Введите путь к директории: " CLEANDIR
 
-if [ -e $CLEANDIR ]
+if [[ -e $CLEANDIR ]]
     then
         echo "Указанная директория найдена"
         cd $CLEANDIR
