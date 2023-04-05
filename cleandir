@@ -1,0 +1,15 @@
+#!/bin/bash
+
+read -p "Введите путь к директории: " CLEANDIR
+
+if [[ -e $CLEANDIR ]]
+    then
+        echo "Указанная директория найдена"
+        cd $CLEANDIR
+        echo "Произвожу удаление"
+        rm -v *.bak *.tmp *.backup
+        echo "Удаление завершено успешно"
+    else
+        echo "Указанная директория не найдена! Выполнение остановлено"
+        exit 2
+fi
